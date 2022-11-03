@@ -1,0 +1,32 @@
+syntax = "proto3";
+import public "global_options.proto";
+
+option go_package="./;proto";
+option java_package = "org.liquibase.grpc.proto";
+option java_multiple_files = true;
+option java_outer_classname = "UpdateOneChangesetSqlProto";
+
+package liquibase;
+
+service UpdateOneChangesetSqlService {
+  rpc execute(UpdateOneChangesetSqlRequest) returns (Response) {}
+}
+
+/* Generates sql to run single changeset */
+message UpdateOneChangesetSqlRequest {
+  string changeset_author = 1; // *required* Author of the changeset to execute
+  string changeset_id = 2; // *required* Id of the changeset to execute
+  string changeset_path = 3; // *required* Path to the changeset to execute
+  optional string default_catalog_name = 4; // The default catalog name to use for the database connection
+  optional string default_schema_name = 5; // The default schema name to use for the database connection
+  optional string driver = 6; // The JDBC driver class
+  optional string driver_properties_file = 7; // The JDBC driver properties file
+  optional string password = 8; // The target database password
+  string url = 9; // *required* The JDBC target database connection URL
+  optional string username = 10; // The target database username
+  liquibase.GlobalOptions global_options = 11;
+}
+
+message Response {
+  string message = 1;
+}
