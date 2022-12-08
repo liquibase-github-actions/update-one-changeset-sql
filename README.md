@@ -1,12 +1,13 @@
 # Liquibase Update One Changeset Sql Action
 Official GitHub Action to run Liquibase Update One Changeset Sql in your GitHub Action Workflow. For more information on how update one changeset sql works visit the [Official Liquibase Documentation](https://docs.liquibase.com/commands/home.html).
 ## Update One Changeset Sql
+[PRO]
 Generates sql to run single changeset
 ## Usage
 ```yaml
 steps:
 - uses: actions/checkout@v3
-- uses: liquibase-github-actions/update-one-changeset-sql@v4.17.2
+- uses: liquibase-github-actions/update-one-changeset-sql@v4.18.0
   with:
     # Author of the changeset to execute
     # string
@@ -70,7 +71,7 @@ The liquibase update one changeset sql action accepts all valid liquibase global
 ```yaml
 steps:
   - uses: actions/checkout@v3
-  - uses: liquibase-github-actions/update-one-changeset-sql@v4.17.2
+  - uses: liquibase-github-actions/update-one-changeset-sql@v4.18.0
     with:
       changesetAuthor: ""
       changesetId: ""
