@@ -7,7 +7,7 @@ Generates sql to run single changeset
 ```yaml
 steps:
 - uses: actions/checkout@v3
-- uses: liquibase-github-actions/update-one-changeset-sql@v4.21.0
+- uses: liquibase-github-actions/update-one-changeset-sql@v4.21.1
   with:
     # Author of the changeset to execute
     # string
@@ -24,10 +24,15 @@ steps:
     # Required
     changesetPath: ""
 
-    # The JDBC target database connection URL
+    # The JDBC database connection URL
     # string
     # Required
     url: ""
+
+    # 
+    # string
+    # Optional
+    database: ""
 
     # The default catalog name to use for the database connection
     # string
@@ -49,12 +54,17 @@ steps:
     # Optional
     driverPropertiesFile: ""
 
-    # The target database password
+    # Password to use to connect to the database
     # string
     # Optional
     password: ""
 
-    # The target database username
+    # 
+    # bool
+    # Optional
+    skipDatabaseStep: ""
+
+    # Username to use to connect to the database
     # string
     # Optional
     username: ""
@@ -71,7 +81,7 @@ The liquibase update one changeset sql action accepts all valid liquibase global
 ```yaml
 steps:
   - uses: actions/checkout@v3
-  - uses: liquibase-github-actions/update-one-changeset-sql@v4.21.0
+  - uses: liquibase-github-actions/update-one-changeset-sql@v4.21.1
     with:
       changesetAuthor: ""
       changesetId: ""
