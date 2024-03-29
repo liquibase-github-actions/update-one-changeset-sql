@@ -12,8 +12,7 @@ service UpdateOneChangesetSqlService {
   rpc execute(UpdateOneChangesetSqlRequest) returns (Response) {}
 }
 
-/* [PRO]
-Generates sql to run single changeset */
+/* [PRO] Generates sql to run single changeset */
 message UpdateOneChangesetSqlRequest {
   optional string change_exec_listener_class = 1; // Fully-qualified class which specifies a ChangeExecListener
   optional string change_exec_listener_properties_file = 2; // Path to a properties file for the ChangeExecListenerClass

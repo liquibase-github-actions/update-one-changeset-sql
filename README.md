@@ -1,8 +1,7 @@
 # Liquibase Update One Changeset Sql Action
 Official GitHub Action to run Liquibase Update One Changeset Sql in your GitHub Action Workflow. For more information on how update one changeset sql works visit the [Official Liquibase Documentation](https://docs.liquibase.com/commands/home.html).
 ## Update One Changeset Sql
-[PRO]
-Generates sql to run single changeset
+[PRO] Generates sql to run single changeset
 ## Usage
 ```yaml
 steps:
