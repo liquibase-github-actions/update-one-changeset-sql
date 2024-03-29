@@ -7,7 +7,7 @@ Generates sql to run single changeset
 ```yaml
 steps:
 - uses: actions/checkout@v3
-- uses: liquibase-github-actions/update-one-changeset-sql@v4.26.0
+- uses: liquibase-github-actions/update-one-changeset-sql@v4.27.0
   with:
     # The root changelog file
     # string
@@ -96,7 +96,7 @@ The liquibase update one changeset sql action accepts all valid liquibase global
 ```yaml
 steps:
   - uses: actions/checkout@v3
-  - uses: liquibase-github-actions/update-one-changeset-sql@v4.26.0
+  - uses: liquibase-github-actions/update-one-changeset-sql@v4.27.0
     with:
       changelogFile: ""
       changesetAuthor: ""
