@@ -6,7 +6,7 @@ Official GitHub Action to run Liquibase Update One Changeset Sql in your GitHub 
 ```yaml
 steps:
 - uses: actions/checkout@v3
-- uses: liquibase-github-actions/update-one-changeset-sql@v4.29.1
+- uses: liquibase-github-actions/update-one-changeset-sql@v4.29.2
   with:
     # The root changelog file
     # string
@@ -95,7 +95,7 @@ The liquibase update one changeset sql action accepts all valid liquibase global
 ```yaml
 steps:
   - uses: actions/checkout@v3
-  - uses: liquibase-github-actions/update-one-changeset-sql@v4.29.1
+  - uses: liquibase-github-actions/update-one-changeset-sql@v4.29.2
     with:
       changelogFile: ""
       changesetAuthor: ""
